@@ -1,5 +1,5 @@
 # Dataset
-.data/
+.data/dataset.csv
 
 # Jupyter Notebook
 .ipynb_checkpoints
