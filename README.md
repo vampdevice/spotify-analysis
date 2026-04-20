@@ -31,6 +31,8 @@ The dataset can be found on Kaggle at https://www.kaggle.com/datasets/maharshipa
 Follow these steps to run the code:
 
 - Clone this repository
+- Download the dataset provided above
+  - Insert the downloaded dataset file "dataset.csv" into "data" folder.
 - Install the required dependencies
 - Open "spotify_analysis.ipynb"
 - Select "Run All"
