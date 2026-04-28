@@ -28,12 +28,17 @@ The dataset can be found on Kaggle at https://www.kaggle.com/datasets/maharshipa
 
 # How to Run
 
-Follow these steps to run the code:
+Follow these steps to run the Jupyter Notebook:
 
 - Clone this repository
-- Download the dataset provided above as a .zip file
-  - Extract All
-  - Insert "dataset.csv" into "data" folder.
 - Install the required dependencies
 - Open "spotify_analysis.ipynb"
 - Select "Run All"
+
+Follow these steps to run the Streamlit Dashboard:
+
+- Clone this repository
+- Install the required dependencies
+- Open "spotify_dashboard.py"
+- In the `terminal` change directories so you are in the root of the project folder. (ex: `cd Desktop/Spotify-Analysis`)
+- In the `terminal`, run `streamlit run spotify_dashboard.py`
