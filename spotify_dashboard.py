@@ -35,7 +35,8 @@ with col1:
         title="Average Track Popularity by Genre",
         x="track_genre",
         y="popularity",
-        color_discrete_sequence=["#1ED760"],
+        color="popularity",
+        color_continuous_scale=["#ffffff", "#1ED760"],
         height=450,
     )
 
@@ -62,7 +63,7 @@ with col2:
         x="valence",
         y="popularity",
         color="energy",
-        color_continuous_scale=["#ffffff", "#1ED760", "#002400"],
+        color_continuous_scale=["#ffffff", "#1ED760"],
         hover_data=["track_name", "artists"],
         height=470,
     )
