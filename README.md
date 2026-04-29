@@ -25,6 +25,8 @@ The dataset can be found on Kaggle at https://www.kaggle.com/datasets/maharshipa
 - matplotlib
 - seaborn
 - sklearn
+- streamlit
+- plotly
 
 # How to Run
 
