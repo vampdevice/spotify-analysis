@@ -34,6 +34,7 @@ Follow these steps to run the Jupyter Notebook:
 
 - Clone this repository
 - Install the required dependencies using `pip install -r requirements.txt`
+- Download the dataset from https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset and unzip the downloaded file. Copy the `dataset.csv` file from the unzipped folder to the `data/` folder in the repository.
 - Open "spotify_analysis.ipynb"
 - Select "Run All"
 
@@ -41,6 +42,7 @@ Follow these steps to run the Streamlit Dashboard:
 
 - Clone this repository
 - Install the required dependencies using `pip install -r requirements.txt`
+- Download the dataset from https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset and unzip the downloaded file. Copy the `dataset.csv` file from the unzipped folder to the `data/` folder in the repository.
 - Open "spotify_dashboard.py"
 - In the `terminal` change directories so you are in the root of the project folder (ex: `cd Desktop/Spotify-Analysis`)
 - In the `terminal`, run the app by entering `streamlit run spotify_dashboard.py`
