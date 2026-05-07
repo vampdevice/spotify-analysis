@@ -3,6 +3,3 @@ data/dataset.csv
 
 # Jupyter Notebook
 .ipynb_checkpoints
-
-# Streamlit
-.streamlit

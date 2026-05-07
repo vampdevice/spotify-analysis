@@ -20,6 +20,7 @@ df = df.dropna(subset=['artists', 'album_name', 'track_name'])
 # drop only exact duplicates
 df = df.drop_duplicates()
 
+# create two columns for a nicer layout
 col1, col2 = st.columns(2)
 
 with col1:
