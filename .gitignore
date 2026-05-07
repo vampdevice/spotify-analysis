@@ -1,5 +1,6 @@
 # Dataset
-data/dataset.csv
+data/*
+!data/.gitkeep
 
 # Jupyter Notebook
 .ipynb_checkpoints
