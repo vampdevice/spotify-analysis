@@ -20,6 +20,15 @@ df = df.dropna(subset=['artists', 'album_name', 'track_name'])
 # drop only exact duplicates
 df = df.drop_duplicates()
 
+# list of categorical features for visualization
+plot_options = {
+    "Explicit": "explicit",
+    "Track Genre": "track_genre",
+    "Key": "key",
+    "Time Signature": "time_signature",
+    "Mode": "mode"
+}
+
 # create two columns for a nicer layout
 col1, col2 = st.columns(2)
 
@@ -70,3 +79,34 @@ with col2:
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
+# bar charts for categorical features
+selected_label = st.selectbox("Categorical Feature", list(plot_options.keys()))
+
+selected_col = plot_options[selected_label]
+counts = df[selected_col].value_counts().reset_index()
+counts.columns = [selected_col, "count"]
+
+# Horizontal layout for genres
+if selected_col == "track_genre":
+    fig = px.bar(
+        counts,
+        x="count",
+        y=selected_col,
+        color="count",
+        color_continuous_scale=["#ffffff","#1ED760", "#075121"],
+        orientation="h",
+        text="count"
+    )
+
+else:
+    fig = px.bar(
+        counts,
+        x=selected_col,
+        y="count",
+        color="count",
+        color_continuous_scale=["#ffffff","#1ED760", "#075121"],
+        text="count"
+    )
+
+st.plotly_chart(fig, use_container_width=True)
