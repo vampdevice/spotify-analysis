@@ -21,7 +21,7 @@ df = df.dropna(subset=['artists', 'album_name', 'track_name'])
 df = df.drop_duplicates()
 
 # list of categorical features for visualization
-plot_options = {
+categories = {
     "Explicit": "explicit",
     "Track Genre": "track_genre",
     "Key": "key",
@@ -81,13 +81,14 @@ with col2:
     st.plotly_chart(fig, use_container_width=True)
 
 # bar charts for categorical features
-selected_label = st.selectbox("Categorical Feature", list(plot_options.keys()))
+selected_label = st.selectbox("Categorical Feature", list(categories.keys()))
 
-selected_col = plot_options[selected_label]
+# use catgorical features for figures
+selected_col = categories[selected_label]
 counts = df[selected_col].value_counts().reset_index()
 counts.columns = [selected_col, "count"]
 
-# Horizontal layout for genres
+# horizontal layout for genres
 if selected_col == "track_genre":
     fig = px.bar(
         counts,
@@ -99,6 +100,7 @@ if selected_col == "track_genre":
         text="count"
     )
 
+# vertical layout for other features
 else:
     fig = px.bar(
         counts,
